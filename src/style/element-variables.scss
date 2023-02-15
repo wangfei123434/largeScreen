@@ -1,0 +1,129 @@
+$--color-primary: #316AEE;
+
+$--font-path: "element-plus/lib/theme-chalk/fonts";
+
+@import "element-plus/theme-chalk/src/base";
+@import "element-plus/theme-chalk/src/button";
+@import "element-plus/theme-chalk/src/button-group";
+@import "element-plus/theme-chalk/src/divider";
+@import "element-plus/theme-chalk/src/loading";
+@import "element-plus/theme-chalk/src/form";
+@import "element-plus/theme-chalk/src/form-item";
+@import "element-plus/theme-chalk/src/input";
+@import "element-plus/theme-chalk/src/input-number";
+@import "element-plus/theme-chalk/src/table";
+@import "element-plus/theme-chalk/src/table-column";
+@import "element-plus/theme-chalk/src/tabs";
+@import "element-plus/theme-chalk/src/tab-pane";
+@import "element-plus/theme-chalk/src/pagination";
+@import "element-plus/theme-chalk/src/tooltip";
+@import "element-plus/theme-chalk/src/menu";
+@import "element-plus/theme-chalk/src/submenu";
+@import "element-plus/theme-chalk/src/menu-item";
+@import "element-plus/theme-chalk/src/menu-item-group";
+@import "element-plus/theme-chalk/src/date-picker";
+@import "element-plus/theme-chalk/src/upload";
+@import "element-plus/theme-chalk/src/message";
+@import "element-plus/theme-chalk/src/message-box";
+@import "element-plus/theme-chalk/src/dialog";
+@import "element-plus/theme-chalk/src/steps";
+@import "element-plus/theme-chalk/src/step";
+@import "element-plus/theme-chalk/src/collapse";
+@import "element-plus/theme-chalk/src/collapse-item";
+@import "element-plus/theme-chalk/src/select";
+@import "element-plus/theme-chalk/src/option";
+@import "element-plus/theme-chalk/src/option-group";
+@import "element-plus/theme-chalk/src/radio";
+@import "element-plus/theme-chalk/src/radio-group";
+@import "element-plus/theme-chalk/src/radio-button";
+@import "element-plus/theme-chalk/src/checkbox-group";
+@import "element-plus/theme-chalk/src/checkbox";
+@import "element-plus/theme-chalk/src/dropdown";
+@import "element-plus/theme-chalk/src/dropdown-item";
+@import "element-plus/theme-chalk/src/dropdown-menu";
+@import "element-plus/theme-chalk/src/tag";
+@import "element-plus/theme-chalk/src/tree";
+@import "element-plus/theme-chalk/src/switch";
+@import "element-plus/theme-chalk/src/col";
+@import "element-plus/theme-chalk/src/row";
+@import "element-plus/theme-chalk/src/icon";
+
+
+.gen-pagination {
+    position:absolute;
+    right: 20px;
+    bottom:20px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-end;
+    // margin-top: 24px;
+    // padding: 8px 0;
+  }
+  .gen-pagination .el-pager .number,
+  .gen-pagination  [type=button],
+  .gen-pagination  .el-pagination__sizes,
+  .gen-pagination  .el-pagination__sizes .el-input__inner,
+  .gen-pagination  .el-pagination__sizes .el-input__suffix,
+  .gen-pagination  .el-pagination__jump,
+  .gen-pagination  .el-pagination__jump .el-input__inner,
+  .gen-pagination  .el-pagination__total{
+    height: 27px!important;
+    line-height: 27px!important;
+    border-radius: 2px!important;
+  }
+
+  .gen-pagination .el-pager .number{
+    // border: 1px #D9DBDF solid!important;
+    margin: 0 3px;
+    padding:0px 9px;
+    min-width: 27px!important;
+    font-size: 12px;
+    font-family: Helvetica;
+    color:rgba(14, 81, 251, 1);
+  }
+
+  .gen-pagination .el-pager .active,
+  .gen-pagination .el-pager .number:hover,
+  .gen-pagination .btn-prev:hover,
+  .gen-pagination .btn-next:hover{
+    // background: #3471F6;
+    // border-radius: 2px!important;
+    color: white;
+    border: none!important;
+    // background: rgba(14, 81, 251, 1)
+  }
+  .gen-pagination .btn-prev{
+      &:disabled{
+          background: rgba(14, 81, 251, 1);
+          color:white;
+      }
+    background: rgba(14, 81, 251, 1);
+    color:#fff;
+  }
+  .gen-pagination .btn-next{
+    &:disabled{
+        background: rgba(14, 81, 251, 1);
+        color:white;
+    }
+  background: rgba(14, 81, 251, 1);
+  color:rgba(0, 0, 0, 1);
+}
+  .el-pager li{
+      background: transparent;
+  }
+  .gen-pagination .btn-prev,.gen-pagination .btn-next{
+    // border: 1px #D9DBDF solid!important;
+    // background: rgba(14, 81, 251, 1);
+    font-family: Helvetica;
+    width: 27px;
+    text-align: center;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    color: white;
+    margin: 0 3px!important;
+  }
+
+  .gen-pagination .el-pagination__jump{
+    margin-left: 0!important;
+    margin-right: 16px!important;
+  }

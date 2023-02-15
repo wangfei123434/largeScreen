@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body style='transform-origin: left top;'>
+  <script>
+    //   document.body.style.zoom = String(window.innerWidth / 1920)
+      document.body.style.transform = `scale(${window.innerWidth / 1920})`
+      window.onresize = function (){
+        //   document.body.style.zoom = String(window.innerWidth / 1920)
+        document.body.style.transform = `scale(${window.innerWidth / 1920})`
+      }
+  </script>
+    <div id="app"></div>
+    <script src="/js/g6.min.js"></script>
+    <script src="/js/layout.min.js"></script>
+    <script src="/js/x6.js"></script>
+    <!-- <script src="/js/graphlib.min.js"></script> -->
+    <script src="/js/lodash.min.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+<script>
+    function detectZoom (){
+        var ratio = 0,
+            screen = window.screen,
+            ua = navigator.userAgent.toLowerCase();
+
+        if (window.devicePixelRatio !== undefined) {
+            ratio = window.devicePixelRatio;
+        }
+        else if (~ua.indexOf('msie')) {
+            if (screen.deviceXDPI && screen.logicalXDPI) {
+                ratio = screen.deviceXDPI / screen.logicalXDPI;
+            }
+        }
+        else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+            ratio = window.outerWidth / window.innerWidth;
+        }
+        if (ratio){
+            ratio = Math.round(ratio * 100);
+        }
+        return ratio;
+    };
+</script>
+</html>

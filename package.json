@@ -1,0 +1,76 @@
+{
+  "name": "template",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --force --host 0.0.0.0",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint",
+    "test": "jest --coverage --logHeapUsage --maxWorkers=2",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "lint:style": "stylelint --fix src/**/*.{vue,htm,html,css,sss,less,scss}",
+    "deploy:prod": "npm run build && scp -r ./talent-data-web root@172.16.10.209:/data/talent-brain/ui/"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@antv/g6": "^4.3.11",
+    "@antv/layout": "^0.1.19-beta.3",
+    "@antv/x6": "^1.28.1",
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.7",
+    "echarts": "^5.1.1",
+    "echarts-gl": "^2.0.8",
+    "element-plus": "^1.2.0-beta.3",
+    "js-md5": "^0.7.3",
+    "lodash": "^4.17.21",
+    "mitt": "^3.0.0",
+    "nprogress": "^0.2.0",
+    "qs": "^6.10.1",
+    "sass": "^1.32.11",
+    "uuid": "^8.3.2",
+    "vue": "^3.1.0-beta.7",
+    "vue-echarts": "^6.0.0-rc.5",
+    "vue-router": "^4.0.6",
+    "vue-seamless-scroll": "^1.1.23",
+    "vue3-seamless-scroll": "^1.1.5",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@amatlash/vite-plugin-stylelint": "^1.1.1",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@types/node": "^14.14.41",
+    "@types/nprogress": "^0.2.0",
+    "@types/qs": "^6.9.6",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "@vitejs/plugin-legacy": "^1.3.3",
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vitejs/plugin-vue-jsx": "^1.1.3",
+    "@vue/compiler-sfc": "^3.0.11",
+    "cwebp-bin": "^6.1.1",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-ts": "^1.0.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4",
+    "vite": "^2.2.1",
+    "vite-plugin-compression": "^0.2.4",
+    "vite-plugin-eslint": "^1.1.0",
+    "vite-plugin-style-import": "^0.10.0",
+    "vite-plugin-vue-webp": "^0.0.5"
+  }
+}

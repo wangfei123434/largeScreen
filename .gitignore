@@ -1,0 +1,16 @@
+node_modules
+.DS_Store
+dist
+dist.zip
+admin
+admin.zip
+dist-ssr
+*.local
+.eslintcache
+coverage
+deyang-noproof-admin-web
+deyang-noproof-admin-web.zip
+alias.config.js
+.idea
+talent-data-web
+talent-data-web.zip

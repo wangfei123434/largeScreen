@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom",
+      "DOM.Iterable", 
+      "ScriptHost"
+    ],
+    "types": [
+      "vite/client"
+    ],
+    //===========编译器ide提示。。。。
+    "paths": {
+      "/@/*": [
+        "src/*"
+      ]
+    }
+  },
+  //===========编译器ide提示。。。。
+  "include": [
+    "src/**/*",
+  ]
+}

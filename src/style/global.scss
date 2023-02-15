@@ -1,0 +1,95 @@
+
+//宽度渐变
+@keyframes width-gradual-change {
+  from {width:0}
+  //to {width: 100%}
+}
+
+@for $i from 1 through 10 {
+  .f-#{$i}{
+    flex:#{$i}
+  }
+}
+.flex{
+  display: flex;
+}
+@for $i from 1 through 3 {
+  .line-#{$i} {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: #{$i};
+    line-clamp: #{$i};
+    -webkit-box-orient: vertical;
+  }
+}
+.w-full{
+  width: 100%;
+}
+.h-full{
+  height: 100%;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.absolute-full{
+  position: absolute;
+  content: '';
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.f-1{
+  flex: 1;
+}
+
+
+//通用有背景的元素
+.bg-item-wrapper{
+  display: flex;
+  position: relative;
+  .content_inner{
+    z-index: 2;
+    position: relative;
+    flex: 1;
+    line-height:inherit ;
+  }
+  .bg{
+    position: absolute;
+    z-index: 1;
+    content: '';
+    display: none;
+    animation: width-gradual-change .3s ease-in-out;
+  }
+  &.active,&:hover{
+    &,*{
+      cursor: pointer;
+    }
+    .bg{
+      display: block;
+    }
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.roll-animate{
+  transition: all .8s;
+}
